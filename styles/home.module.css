@@ -9,3 +9,76 @@
   border-bottom: 1px solid #efefef;
   margin: 3em auto;
 }
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1a; /* Dark background for noir feel */
+  color: #eee;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.gridContainer {
+  border: 2px solid #555;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.3); /* Green glow for mystery */
+}
+
+.tile {
+  box-sizing: border-box;
+  /* Visual appearance (background-image, background-position) and transitions are handled by inline styles in Tile.js */
+}
+
+.emptySlot {
+  box-sizing: border-box;
+  background-color: #111; /* Slightly darker to distinguish */
+  border: 1px dashed #888; /* More visible dashed border */
+}
+
+.narrativeOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark overlay for narrative scenes */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 1.5em;
+  line-height: 1.6;
+}
+
+.narrativeOverlay p {
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.clickToContinue {
+  font-size: 0.8em;
+  color: #aaa;
+  margin-top: 30px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.narrativeOverlay h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #00ff00; /* Green for emphasis */
+}
+
+.narrativeOverlay p {
+  max-width: 800px;
+  margin-bottom: 10px; /* Reduced margin for instruction lines */
+}
